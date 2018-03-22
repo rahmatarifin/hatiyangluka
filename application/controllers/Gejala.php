@@ -9,4 +9,12 @@ Class Gejala extends ci_controller{
 		$data['data']=$this->Model_gejala->tampildata();
 		$this->load->view('gejala',$data);
 	}
+
+	function tambah(){
+		$data=array('gejalaid'=>$this->input->post('gejalaid'),
+			'gejala'=>$this->input->post('gejala')
+			);
+		$this->model_crud->tambah('data');
+		redirect('Crud_gejala');
+	}
 }

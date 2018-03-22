@@ -12,8 +12,7 @@
 		<tr>
 			<?php foreach ($data as $row):?>
 				<td><?php echo $row->gejalaid;?></td>
-				<td><?php echo $row->gejala;?></td>
-			
+				<td><?php echo $row->gejala;?></td>			
 		</tr>
 		<?php endforeach; ?>
 	</table>
