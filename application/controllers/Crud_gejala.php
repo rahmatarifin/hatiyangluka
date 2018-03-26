@@ -15,7 +15,7 @@ class Crud_gejala extends ci_controller
 		$data=array('gejalaid'=>$this->input->post('gejalaid'), 'gejala'=>$this->input->post('gejala')
 		);
 		$this->model_crud_gejala->tambah($data);
-		redirect('crud_gejala');
+		redirect('dashboard/crud_gejala');
 	}
 
 	function edit(){
@@ -28,13 +28,13 @@ class Crud_gejala extends ci_controller
 		$gejalaid=$this->input->post('gejalaid');
 		$data=array('gejala'=>$this->input->post('gejala'));
 		$this->model_crud_gejala->update($gejalaid, $data);
-		redirect('crud_gejala');
+		redirect('dashboard/crud_gejala');
 	}
 
 	function hapus(){
 		$gejalaid=$this->uri->segment(3);
 		$this->model_crud_gejala->hapus($gejalaid);
-		redirect('crud_gejala');
+		redirect('dashboard/crud_gejala');
 	}
 
 }

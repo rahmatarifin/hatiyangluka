@@ -15,7 +15,7 @@ class Crud_penyakit extends ci_controller
 		$data=array('penyakitid'=>$this->input->post('penyakitid'), 'penyakit'=>$this->input->post('penyakit')
 		);
 		$this->model_crud_penyakit->tambah($data);
-		redirect('crud_penyakit');
+		redirect('dashboard/crud_penyakit');
 	}
 
 	function edit(){
@@ -26,15 +26,17 @@ class Crud_penyakit extends ci_controller
 
 	function update(){
 		$penyakitid=$this->input->post('penyakitid');
-		$data=array('penyakit'=>$this->input->post('penyakit'));
+		$data=array('penyakit'=>$this->input->post('penyakit'),
+			'penyebab'=>$this->input->post('penyebab'),
+			'solusi'=>$this->input->post('solusi'));
 		$this->model_crud_penyakit->update($penyakitid, $data);
-		redirect('crud_penyakit');
+		redirect('dashboard/crud_penyakit');
 	}
 
 	function hapus(){
 		$penyakitid=$this->uri->segment(3);
 		$this->model_crud_penyakit->hapus($penyakitid);
-		redirect('crud_penyakit');
+		redirect('dashboard/crud_penyakit');
 	}
 
 }
