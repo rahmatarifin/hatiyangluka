@@ -13,15 +13,35 @@
 
     <!-- Main content -->
     <section class="content">
-      <?php echo form_open('dashboard/tambah'); ?>
-      <pre>
-        <h1>Tambah Data Gejala</h1>
-        Gejala ID : <input type="text" name="gejalaid" placeholder="gejalaid" required autofocus><br>
-        Gejala    : <input type="text" name="gejala" placeholder="gejala" required>
-        <input type="submit" value="Simpan">
-      </pre>
-      <?php form_close(); ?>
-      <table width="70%" border="1" margin-left="5px">
+    <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Tambah Gejala</h3>
+            </div>
+
+        <?php echo form_open('dashboard/tambah'); ?>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+              <label>Gejala ID</label>
+              <input class="form-control" type="text" name="gejalaid" placeholder="gejalaid" required autofocus>
+              </div>
+              <div class="form-group">
+              <label>Gejala</label>
+              <input class="form-control" type="text" name="gejala" placeholder="gejala" required>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Simpan" class="btn btn-primary">
+              </div>
+            </div>
+            </div>
+        </div>
+        <?php form_close(); ?>
+          <div class="row">
+            <div class="col-md-12">
+            <div class="box-body">
+      <table class="table table-bordered" >
         <tr align="center">
           <td colspan="4"><h5>Data Gejala</h5></td>
         </tr>
@@ -30,14 +50,19 @@
           <td>Gejala</td>
           <td colspan="2">Aksi</td>
         </tr>
-        <tr class="tab">
+        <tr class="tab" >
           <?php foreach($data as $row): ?>
-        <td><?php echo $row->gejalaid; ?></td>
+        <td align="center"><?php echo $row->gejalaid; ?></td>
         <td><?php echo $row->gejala;?></td>
-        <td><a href='<?php base_url();?>edit/<?php echo $row->gejalaid;?>'>Edit</a></td>
-        <td><a href='<?php base_url();?>hapus/<?php echo $row->gejalaid;?>'>Hapus</a></td>
+        <td align="center"><a class="btn btn-sm btn-success" href='<?php base_url();?>edit/<?php echo $row->gejalaid;?>'><i class="fa fa-external-link"></i></a> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <a class="btn btn-sm btn-danger" href='<?php base_url();?>hapus/<?php echo $row->gejalaid;?>'><i class="fa  fa-eraser"></i></a></td>
         </tr>
       <?php endforeach; ?>
       </table>
+      </div>
+
+      </div>
+      </div>
+      </div>
+      </div>
     </section>
 </div>

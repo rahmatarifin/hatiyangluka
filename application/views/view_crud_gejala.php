@@ -25,7 +25,7 @@
 		<tr>
 			<?php foreach($data as $row): ?>
 				<td><?php echo $row->gejalaid; ?></td>
-				<td><?php echo $row->gejala;?></td>
+				<td><?php echo $row->gejala; ?></td>
 				<td><a href='<?php base_url();?>crud_gejala/edit/<?php echo $row->gejalaid;?>'>Edit</a></td>
 				<td><a href='<?php base_url();?>crud_gejala/hapus/<?php echo $row->gejalaid;?>'>Hapus</a></td>
 		</tr>
