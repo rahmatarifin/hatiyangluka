@@ -7,7 +7,7 @@ class Dashboard extends ci_controller{
 		$this->load->helper('url');
 		$this->load->model('model_crud_gejala');
 		$this->load->model('model_crud_penyakit');
-//		$this->load->model('model_crud_rules');
+		$this->load->model('model_crud_rules');
 	}
 
 	//function gejala
@@ -95,7 +95,7 @@ class Dashboard extends ci_controller{
 	}
 
 	//function rules
-/*
+
 	function crud_rules(){
 		$this->load->view('templates/header_v');
 		$this->load->view('templates/side_v');
@@ -127,5 +127,34 @@ class Dashboard extends ci_controller{
 		$this->model_crud_rules->hapus($rules);
 		redirect('dashboard/crud_rules');
 	}
-*/
+
+	function tab_penyakit(){
+		$this->load->view('templates/header_v');
+		$this->load->view('templates/side_v');
+		$data['data']= $this->model_crud_penyakit->tampilData();
+		$this->load->view('v_tab_penyakit',$data);
+		$this->load->view('templates/footer');
+	}
+
+	function tab_gejala(){
+		$this->load->view('templates/header_v');
+		$this->load->view('templates/side_v');
+		$data['data']= $this->model_crud_gejala->tampilData();
+		$this->load->view('v_tab_gejala',$data);
+		$this->load->view('templates/footer');
+	}
+
+	function calender(){
+		$this->load->view('templates/header_v');
+		$this->load->view('templates/side_v');
+		$this->load->view('calender');
+		$this->load->view('templates/footer');
+	}
+
+	function email(){
+		$this->load->view('templates/header_v');
+		$this->load->view('templates/side_v');
+		$this->load->view('email');
+		$this->load->view('templates/footer');
+	}
 }

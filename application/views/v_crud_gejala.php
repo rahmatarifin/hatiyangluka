@@ -25,7 +25,7 @@
             <div class="col-md-6">
               <div class="form-group">
               <label>Gejala ID</label>
-              <input class="form-control" type="text" name="gejalaid" placeholder="gejalaid" required autofocus>
+                <input class="form-control" type="text" name="gejalaid" placeholder="gejalaid" required autofocus>
               </div>
               <div class="form-group">
               <label>Gejala</label>
@@ -35,16 +35,16 @@
                 <input type="submit" value="Simpan" class="btn btn-primary">
               </div>
             </div>
-            </div>
+          </div>
         </div>
         <?php form_close(); ?>
           <div class="row">
             <div class="col-md-12">
             <div class="box-body">
-      <table class="table table-bordered" >
-        <tr align="center">
-          <td colspan="4"><h5>Data Gejala</h5></td>
-        </tr>
+            <table class="table table-bordered" >
+            <tr align="center">
+            <td colspan="4"><h5>Data Gejala</h5></td>
+            </tr>
         <tr align="center">
           <td>Gejala ID</td>
           <td>Gejala</td>

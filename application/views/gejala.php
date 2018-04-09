@@ -13,6 +13,8 @@
 			<?php foreach ($data as $row):?>
 				<td><?php echo $row->gejalaid;?></td>
 				<td><?php echo $row->gejala;?></td>			
+				<td><?php echo $row->namalatin;?></td>
+				<td><?php echo $row->solusi;?></td>
 		</tr>
 		<?php endforeach; ?>
 	</table>

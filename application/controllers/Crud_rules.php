@@ -12,29 +12,31 @@ class Crud_rules extends ci_controller
 	}
 
 	function tambah(){
-		$data=array('rules'=>$this->input->post('rules'), 'penyakitid'=>$this->input->post('penyakitid'),'gejalaid'
+		$data=array('rules'=>$this->input->post('rules'), 
+			'penyakitid'=>$this->input->post('penyakitid'),
+			'gejalaid'=>$this->input->post('gejalaid')
 		);
-		$this->model_crud_gejala->tambah($data);
-		redirect('crud_gejala');
+		$this->model_crud_rules->tambah($data);
+		redirect('crud_rules');
 	}
 
 	function edit(){
-		$gejalaid=$this->uri->segment(3);
-		$data['data']=$this->model_crud_gejala->per_id($gejalaid);
-		$this->load->view('update_crud_gejala',$data);
+		$rules=$this->uri->segment(3);
+		$data['data']=$this->model_crud_rules->per_id($rules);
+		$this->load->view('update_crud_rules',$data);
 	}
 
 	function update(){
-		$gejalaid=$this->input->post('gejalaid');
-		$data=array('gejala'=>$this->input->post('gejala'));
-		$this->model_crud_gejala->update($gejalaid, $data);
-		redirect('crud_gejala');
+		$rules=$this->input->post('rules');
+		$data=array('rules'=>$this->input->post('rules'));
+		$this->model_crud_rules->update($rules, $data);
+		redirect('crud_rules');
 	}
 
 	function hapus(){
-		$gejalaid=$this->uri->segment(3);
-		$this->model_crud_gejala->hapus($gejalaid);
-		redirect('crud_gejala');
+		$rules=$this->uri->segment(3);
+		$this->model_crud_rules->hapus($rules);
+		redirect('crud_rules');
 	}
 
 }

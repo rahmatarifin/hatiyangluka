@@ -10,22 +10,34 @@
         <li class="active">Dashboard</li>
       </ol>
     </section>
+
     <section class="content">
-      <?php foreach($data as $row):?>
-  <?php echo form_open('crud_gejala/update');?>
-  <h1>Edit Data Gejala</h1>
-  <table>
-    <tr>
-      <td>GejalaID</td>
-      <td><input type="text" name="gejalaid" value="<?php echo $row->gejalaid;?>"></td>
-    </tr>
-    <tr>
-      <td>Gejala</td>
-      <td><input type="text" name="gejala" value="<?php echo $row->gejala;?>"></td>
-    </tr>
-  </table>
-  <input type="submit" value="Update">
-<?php endforeach; ?>
-<?php form_close(); ?>
-    </section>
+    <div class="box">
+     <div class="box-header">
+              <h3 class="box-title">Edit data gejala Gejala</h3>
+     </div>
+     <?php foreach($data as $row):?>
+     	<?php echo form_open('crud_gejala/update');?>
+        <div class="box-body">
+            <div class="row">
+     	      <div class="col-md-6">
+     	          <div class="form-group">
+     	              
+                      <label>Gejala ID</label>
+                      <input class="form-control" type="text" name="gejalaid" value="<?php echo $row->gejalaid;?>">
+                      
+                      <label>Gejala</label>
+                      <input class="form-control" type="text" name="gejala" value="<?php echo $row->gejala;?>">
+                      <br>
+                    <div class="form-group">
+                        <input type="submit" value="Update" class="btn btn-primary">
+                    </div>
+     	          </div>
+     	      </div>
+     	  </div>
+     	</div>
+     <?php endforeach; ?>
+     <?php form_close(); ?>
+</section>
+    
 </div>

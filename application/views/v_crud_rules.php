@@ -15,35 +15,53 @@
 
     <!-- Main content -->
     <section class="content">
+    <div class="box">
+    <div class="box-header">
+      <h3 class="box-title">Tambah Rules</h3>
+    </div>
       <?php echo form_open('dashboard/tambahr');?>
-  <pre>
-    <h1>Tambah Data Penyakit</h1>
-    Rules : <input type="text" name="rules" placeholder="rules" required autofocus></br>
-    PenyakitID   : <input type="text" name="penyakitid" placeholder="penyakitid" required></br>
-    GejalaID   : <input type="text" name="gejalaid" placeholder="gejalaid" required><br>
-    <input type="submit" value="Simpan">
-  </pre>
+  <div class="box-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Rules</label>
+          <input type="text" name="rules" class="form-control" placeholder="rules" autofocus required>
+          <label>PenyakitID</label>
+          <input type="text" name="penyakitid" class="form-control" required placeholder="penyakitid">
+          <label>GejalaID</label>
+          <input type="text" name="gejalaid" class="form-control" placeholder="gejalaid" required>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Simpan" class="btn btn-primary">
+        </div>
+      </div>
+    </div>
+  </div>
   <?php form_close(); ?>
-  <hr>
-  <table width="70%" border="1">
-    <tr>
-      <td colspan="6" align="center">Data Penyakit</td>
-    </tr>
-    <tr align="center" text-style="bold">
-      <td>Rules</td>
-      <td>PenyakitID</td>
-      <td>GejalaID</td>
-      <td colspan="2">Aksi</td>
-    </tr>
-    <tr>
-      <?php foreach($data as $row): ?>
-        <td><?php echo $row->rules; ?></td>
-        <td><?php echo $row->penyakitid;?></td>
-        <td><?php echo $row->gejalaid; ?></td>
-        <td><a href='<?php base_url();?>editr/<?php echo $row->rules;?>'>Edit</a></td>
-        <td><a href='<?php base_url();?>hapusr/<?php echo $row->rules;?>'>Hapus</a></td>
-    </tr>
-  <?php endforeach; ?>
-  </table>
-    </section>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box-body">
+        <table class="table table-bordered">
+          <tr align="center">
+            <td colspan="5">Data Rules</td>
+          </tr>
+          <tr align="center">
+            <td>Rules</td>
+            <td>PenyakitID</td>
+            <td>GejalaID</td>
+            <td colspan="2">Aksi</td>
+          </tr>
+          <tr>
+            <?php foreach($data as $row): ?>
+              <td><?php echo $row->rules; ?></td>
+              <td><?php echo $row->penyakitid; ?></td>
+              <td><?php echo $row->gejalaid; ?></td>
+              <td align="center"><a class="btn btn-sm btn-success" href="<?php echo base_url(); ?>index.php/editr/<?php echo $row->rules; ?>"><i class="fa fa-external-link"></i></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="btn btn-sm btn-danger" href="<?php echo base_url(); ?>index.php/hapusr/<?php echo $row->rules; ?>"><i class="fa fa-eraser"></i></a></td>
+          </tr>
+        <?php endforeach; ?>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
 </div>
