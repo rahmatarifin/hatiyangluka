@@ -4,6 +4,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Jom8loKoeT | Log in</title>
+  <style type="text/css">
+  #cdashboard{
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+  }
+  </style>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -32,36 +39,9 @@
   <div class="login-logo">
     <a href="<?php echo base_url();?>assets/index2.html"><b>Jom8loK</b>oeaT</a>
   </div>
-  <!-- /.login-logo -->
-  <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
-
-    <form action="<?php echo base_url('index.php/login/aksi_login');?>" method="post">
-      <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Username" name="username">
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="password">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> Remember Me
-            </label>
-          </div>
-        </div>
-        <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-        </div>
-        <!-- /.col -->
-      </div>
-    </form>
+  <div id="cdashboard">
+    <p>Aplikasi berbasis web untuk membantu mengenai secara dini juga mendetail tentang penyakit hati, di harapkan juga nanti dapat di gunakan oleh halayak umum untuk mengenali penyakit yang mungkin diderita oleh visitor. Agar nantinya visitor dapat memperbaiki kehidupan sehari-harinya sehingga menjadi lebih sehat.</p>
   </div>
-  <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
 
