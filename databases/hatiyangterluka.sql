@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 18, 2018 at 01:25 
+-- Generation Time: Aug 08, 2018 at 12:23 
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `admin` (
   `id` int(10) NOT NULL,
+  `nama` varchar(99) COLLATE utf8_swedish_ci NOT NULL,
   `username` varchar(55) COLLATE utf8_swedish_ci NOT NULL,
   `password` varchar(55) COLLATE utf8_swedish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
@@ -36,9 +37,8 @@ CREATE TABLE IF NOT EXISTS `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'mimin.lelah', 'e351f493f994925ddf05d3531f7f74b0'),
-(2, 'zumzum', '8a1f5d');
+INSERT INTO `admin` (`id`, `nama`, `username`, `password`) VALUES
+(1, 'mimin.lelah', 'admin', '21232f297a57a5a743894a0e4a801fc3');
 
 -- --------------------------------------------------------
 
