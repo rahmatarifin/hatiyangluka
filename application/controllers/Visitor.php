@@ -8,8 +8,18 @@ class Visitor extends ci_controller{
 	function index(){
 		$this->load->view('templates/v_headervisitor');
 		$this->load->view('templates/v_sidevisitor');
-		//$this->load->view('templates/v_content');
+		$this->load->view('v_datadiri');
 		$this->load->view('templates/footer');
+	}
+
+	function data_diri(){
+		
+
+		$check = $this->input->post('check_list');
+		foreach ($check as $object) {
+			$this->m_visitor->insert_data_diri(array('jk'=>$objeck));
+		}
+		redirect('Visitor');
 	}
 
 
@@ -17,7 +27,6 @@ class Visitor extends ci_controller{
 	function tesPenyakit(){
 		$this->load->view('templates/v_headervisitor');
 		$this->load->view('templates/v_sidevisitor');
-
 		$this->load->view('templates/footer');
 	}
 }
